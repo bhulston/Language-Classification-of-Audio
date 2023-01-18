@@ -15,6 +15,7 @@ Below is an example of the download pages:
 Using the python package requests and Beautiful Soup, we can iteratively go through the different webpages, and navigate the HTML code with Beautiful Soup to find the download links. I collect them in a csv of strings and iteratively download them onto AWS
 
 Code Snippet:
+
 <img width="492" alt="image" src="https://user-images.githubusercontent.com/79114425/213092531-0550892c-dfa9-46b6-b7ec-416044547a9b.png">
 
 #AWS storage
@@ -53,6 +54,7 @@ Original Signal:
 <img width="468" alt="image" src="https://user-images.githubusercontent.com/79114425/213087888-d0d5976c-6433-404f-a04e-6563ef893fac.png">
 
 Signal Augmented:
+
 <img width="464" alt="image" src="https://user-images.githubusercontent.com/79114425/213087773-8c506468-fbe5-4744-bbcc-428d7b05f221.png">
 
 
