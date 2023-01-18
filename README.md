@@ -45,17 +45,21 @@ Pitch Scaling - Change the pitch at which the audio clips are represented
 
 Polarity Inversion - A simple transformation, multiplying all values by -1
 
-## Visual Examples
+## Visual Examples - Random Transformation
 -Time Mask
 ![image](https://user-images.githubusercontent.com/79114425/213090565-2e696f61-e44e-4f0a-963c-413107963417.png)
 
 -Noise and Gain: Add some base white noise, and gain that increases the abs value of frequency levels
+
 Original Signal:
+
 <img width="468" alt="image" src="https://user-images.githubusercontent.com/79114425/213087888-d0d5976c-6433-404f-a04e-6563ef893fac.png">
 
 Signal Augmented:
 
 <img width="464" alt="image" src="https://user-images.githubusercontent.com/79114425/213087773-8c506468-fbe5-4744-bbcc-428d7b05f221.png">
+
+As you can see, the scale of the values has changed, and there is some noise and gain causing slightly larger fluctuations in the audio file.
 
 
 # Data Representation
