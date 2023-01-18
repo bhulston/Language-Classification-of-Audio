@@ -6,6 +6,13 @@ Classifying the language spoken in audio clips of native speakers using audio au
 
 # Web Crawler/Scraper
 
+I am collecting data from a website called audio-lingua, that has a database of about 8 languages of audio clips of native speakers. I collected data on the most popular languages, English, Russian, French, Spansih, Chinese, and German.
+
+Below is an example of the download pages:
+<img width="412" alt="image" src="https://user-images.githubusercontent.com/79114425/213087717-2869d467-683e-4f71-970e-dd6afef0b5a8.png">
+
+Using the python package requests and Beautiful Soup, we can iteratively go through the different webpages, and navigate the HTML code with Beautiful Soup to find the download links. I collect them in a csv of strings and iteratively download them onto AWS
+
 #AWS storage
 
 For storage we use S3, and make a bucket that contains different file paths for our different audio files...
@@ -13,7 +20,7 @@ For storage we use S3, and make a bucket that contains different file paths for 
 
 I am using the boto3 package for accessing AWS
 
-<img width="412" alt="image" src="https://user-images.githubusercontent.com/79114425/213087717-2869d467-683e-4f71-970e-dd6afef0b5a8.png">
+
 
 #Audio Augmentation
 
@@ -25,9 +32,13 @@ Augmentation is one of the most important steps when working with both audio or 
 
 ## Augmentation Functions
 Time Mask - Randomly set values to 0, randomly blocking off some of the time periods to reduce overfitting
+
 High Pass Filter - Only keep some of the values from the high frequencies, removing certain low frequency values of the sound
+
 White Noise - The basic white noise you hear that is sort of a constant signal underneath the other sounds
+
 Pitch Scaling - Change the pitch at which the audio clips are represented
+
 Polarity Inversion - A simple transformation, multiplying all values by -1
 
 ## Visual Examples
