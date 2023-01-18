@@ -2,7 +2,11 @@
 Classifying the language spoken in audio clips of native speakers using audio augmentation techniques and Convolutional Neural Networks. MP3 files are scraped from audio-lingua, and saved onto AWS. Because the audio files are 
 
 # Project Outline
-
+1. Web Crawler
+2. AWS Storage
+3. Audio Augmentation
+4. Data Representation
+5. CNN
 
 # Web Crawler/Scraper
 
