@@ -18,7 +18,7 @@ Code Snippet:
 
 <img width="492" alt="image" src="https://user-images.githubusercontent.com/79114425/213092531-0550892c-dfa9-46b6-b7ec-416044547a9b.png">
 
-#AWS storage
+# AWS storage
 
 For storage we use S3, and make a bucket that contains different file paths for our different audio files...
 <img width="607" alt="image" src="https://user-images.githubusercontent.com/79114425/213089223-a0180d9b-ab3c-422b-8ded-2caeafddafe2.png">
@@ -58,7 +58,7 @@ Signal Augmented:
 <img width="464" alt="image" src="https://user-images.githubusercontent.com/79114425/213087773-8c506468-fbe5-4744-bbcc-428d7b05f221.png">
 
 
-## Data Representation
+# Data Representation
 We represent data for the CNN as "images"
 * The images below represent a Mel Spectrogram and MFCC. The Mel Spectogram is a close representation of the audio that humans hear, one that highlights sound waves at certain frequencies. 
    * The wavelengths we hear and the ones a dog hears are not the same! So the mel spectrogram does a better job of representhing these values
