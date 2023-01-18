@@ -9,9 +9,13 @@ Classifying the language spoken in audio clips of native speakers using audio au
 I am collecting data from a website called audio-lingua, that has a database of about 8 languages of audio clips of native speakers. I collected data on the most popular languages, English, Russian, French, Spansih, Chinese, and German.
 
 Below is an example of the download pages:
+
 <img width="412" alt="image" src="https://user-images.githubusercontent.com/79114425/213087717-2869d467-683e-4f71-970e-dd6afef0b5a8.png">
 
 Using the python package requests and Beautiful Soup, we can iteratively go through the different webpages, and navigate the HTML code with Beautiful Soup to find the download links. I collect them in a csv of strings and iteratively download them onto AWS
+
+Code Snippet:
+<img width="492" alt="image" src="https://user-images.githubusercontent.com/79114425/213092531-0550892c-dfa9-46b6-b7ec-416044547a9b.png">
 
 #AWS storage
 
@@ -21,8 +25,7 @@ For storage we use S3, and make a bucket that contains different file paths for 
 I am using the boto3 package for accessing AWS
 
 
-
-#Audio Augmentation
+# Audio Augmentation
 
 Augmentation is one of the most important steps when working with both audio or image data. The reason for this is that the classifications behind different audio images are never static. 
 * Audio is dynamic and the same sentence can be expressed on many wavelengths or frequencies. 
@@ -53,8 +56,13 @@ Signal Augmented:
 <img width="464" alt="image" src="https://user-images.githubusercontent.com/79114425/213087773-8c506468-fbe5-4744-bbcc-428d7b05f221.png">
 
 
+## Data Representation
+We represent data for the CNN as "images"
+* The images below represent a Mel Spectrogram and MFCC. The Mel Spectogram is a close representation of the audio that humans hear, one that highlights sound waves at certain frequencies. 
+   * The wavelengths we hear and the ones a dog hears are not the same! So the mel spectrogram does a better job of representhing these values
+* These arrays that define these spectrograms are going to be put into a Convolutional Neural Network
+   * In essence we are using computer vision techniques to classify different audio clips into the spoken language
 
 <img width="227" alt="image" src="https://user-images.githubusercontent.com/79114425/213087804-f04d6d5b-9f97-4564-8acc-c04788b6eb61.png">
-
 
 <img width="202" alt="image" src="https://user-images.githubusercontent.com/79114425/213087844-c6dcf2be-55f9-4eec-9ace-4e357dc06c26.png">
