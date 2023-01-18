@@ -76,3 +76,20 @@ We represent data for the CNN as "images"
 <img width="227" alt="image" src="https://user-images.githubusercontent.com/79114425/213087804-f04d6d5b-9f97-4564-8acc-c04788b6eb61.png">
 
 <img width="202" alt="image" src="https://user-images.githubusercontent.com/79114425/213087844-c6dcf2be-55f9-4eec-9ace-4e357dc06c26.png">
+
+# Convolutional Neural Network Model
+
+The main considerations are to ensure that the model generalizes well. Because audio is so dynamic, this can be an extremely difficult task for a CNN. 
+* Beyond simple words, classifying audio representations into languages based off its spectral qualities can be difficult, if not impossible. 
+* As you might be thinking, different speakrs of different languages might have a lot of the same speaking qualities. 
+* To do this, we need to enforce the model to generalize
+   * Some methods are to reduce parameters and generalize by adding regularization, adding dropout, and with audio augmentations
+
+Here is the model of the convolution network:
+
+
+* Research has shown that increasing the number of neurons in the convolutional network on each layer improves performance
+* We add padding to be the same so that the inputs and outputs of convolution layers are consistent
+* We also use MaxPooling and eventually flatten our outputs from the convolutional layers
+   * With these outputted values, we run them through some dense layers to actually calculate weights
+* We use Categorical Cross Entropy as our error metric which is essentially a softmax objective function applied to cross entropy
