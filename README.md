@@ -81,12 +81,21 @@ We represent data for the CNN as "images"
 
 The main considerations are to ensure that the model generalizes well. Because audio is so dynamic, this can be an extremely difficult task for a CNN. 
 * Beyond simple words, classifying audio representations into languages based off its spectral qualities can be difficult, if not impossible. 
-* As you might be thinking, different speakrs of different languages might have a lot of the same speaking qualities. 
-* To do this, we need to enforce the model to generalize
-   * Some methods are to reduce parameters and generalize by adding regularization, adding dropout, and with audio augmentations
+* To do this, we need to force the model to generalize
+   * Adding regularization
+   * Adding dropout 
+   * Audio augmentations
+   * One hot encoding labels
+      * Change the 1 labels to 0.9 and others to 0.1. This helps generalization since the model is never 100% sure about an answer
 
 Here is the model of the convolution network:
 
+![image](https://user-images.githubusercontent.com/79114425/213775245-a748406a-2ffc-44ee-9ca2-52b2c41c27dd.png)
+
+Visualization of model:
+![image](https://user-images.githubusercontent.com/79114425/213781475-59286a37-1c33-4109-8c83-da14c742ae4f.png)
+
+As you can see, we have deep convolutional layers and max pooling layers, followed by a flattening layer and deep dense layers with regularization
 
 * Research has shown that increasing the number of neurons in the convolutional network on each layer improves performance
 * We add padding to be the same so that the inputs and outputs of convolution layers are consistent
